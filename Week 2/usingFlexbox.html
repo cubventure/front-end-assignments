@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Using Flexbox</title>
+	<style>
+		div div {
+			border: solid lightgrey 1px;
+			padding: 20px 10px;
+			margin: 15px;
+			flex-basis: content;
+		}
+
+		div.parent {
+			display: flex;
+			flex-flow: row;
+			justify-content: center;
+			align-items: center;
+		}
+
+		@media (max-width: 600px){
+			div.parent {
+				flex-flow: column;
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Using Flexbox</h1>
+	<div class="parent">
+		<div>This is the first section</div>
+		<div>Here is some more text.</div>
+		<div>Text coninues in this section</div>
+		<div>Is there more coming?</div>
+		<div>This is the final section</div>
+	</div>
+	
+</body>
+</html>

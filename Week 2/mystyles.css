@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+	background: url("img/circles-dark.png");
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: red;
+	text-transform: uppercase;
+}
+
+figcaption {
+	color: darkblue;
+}
+
+section {
+	font-family: 'Roboto', sans-serif;
+	font-size: 12px;
+	margin-left: 5%;
+}
+
+a:link {
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+ul {
+	list-style-type: none;
+}
