@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Using jquery</title>  
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+  <style>
+  	header {
+  		margin: 20px 0px;
+  	}
+  	input {
+  		margin-bottom: 10px;
+  	}
+  	button {
+  		margin-bottom: 10px;
+  	}
+  	p {
+  		background-color: lightgreen;
+  		color: grey;
+  		padding-left: 8px;
+  	}
+  </style>
+</head>
+<body>
+
+	<div class="container">
+		<header><h1>Simple plus/minus calculator (jQuery)</h1></header>
+	<!-- 	<input type="number" id="starting-number" size="10">
+		<div class="btn-group" role="group">
+					<button type ="button" id="add" class="btn btn-secondary">+</button>						
+					<button type="button" id="minus" class="btn btn-secondary">-</button>
+				</div>
+		<input type="number" id="alter-number" size="5">
+		<span id="answer">
+					Answer appears here after clicking the plus or minus button!
+				</p> -->
+
+
+
+		<div class="row">
+			<div class="col-3 text-center">
+				<input class="form-control" type="number" id="starting-number">	
+			</div>
+			<div class="col-3 text-center">
+				<div class="btn-group" role="group">
+					<button type ="button" id="add" class="btn btn-secondary">+</button>						
+					<button type="button" id="minus" class="btn btn-secondary">-</button>
+				</div>
+				
+			</div>
+			<div class="col-3 text-center">
+				<input class="form-control" type="number" id="alter-number">	
+			</div>
+
+			<div class="col-3">
+				<p id="answer">
+					Result = 
+				</p>				
+			</div>
+			
+		</div>
+		<div class="row">
+			
+		</div>		
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script>
+	  $(document).ready(function() {
+
+	    $("#add").click(function(){
+	    	var first = $("#starting-number").val();
+	    	var alter = $("#alter-number").val();
+	    	var answer = parseInt(first) + parseInt(alter);
+	    	$("p#answer").text("Result = " + answer);
+	    });
+
+	    $("#minus").click(function(){
+	    	var first = $("#starting-number").val();
+	    	var alter = $("#alter-number").val();
+	    	var answer = parseInt(first) - parseInt(alter);
+	    	$("p#answer").text("Result = " + answer);
+	    });
+
+	  });
+	</script>
+</body>
+</html>
